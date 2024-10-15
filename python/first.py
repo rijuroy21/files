@@ -1,0 +1,10 @@
+a=25
+print(a)
+b="hari"
+print(b)
+pi=10.5
+print(pi)
+c="true"
+print(c)
+a,b=10,10
+print(a,b)
