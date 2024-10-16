@@ -1,0 +1,1 @@
+print("{:<10}{:<10}".format ("hello","welcome"))
