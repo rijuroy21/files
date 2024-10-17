@@ -1,11 +1,9 @@
-
 i=1
 sum=0
 osum=0
 esum=0
 while(i<=10):
     sum+=i
-
     if(i%2==0):
         esum+=i
     elif(i%2!=0): 
