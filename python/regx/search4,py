@@ -1,0 +1,3 @@
+import re
+a="We"
+print(re.search('W.?',a))
