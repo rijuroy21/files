@@ -1,7 +1,7 @@
 import tkinter
 
 win=tkinter.Tk()
-win.title("Calculator")
+win.title("Checkbox")
 win.geometry('300x300')
 win.config(background="green")
 def data():
