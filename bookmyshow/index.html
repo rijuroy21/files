@@ -2,403 +2,332 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies Tickets,Plays,Sports</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/fav.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
 </head>
 
 <body>
-    <div class="main">
-        <div class="aa">
-            <div class="logo">
-                <img src="img/bookmyshow-logo-vector.png" alt="bookmyshow-logo-vector" width="180px" height="100px">
-            </div>
-
-            <div class="search">
-                <form class="search-form">
-                    <div class="input-group">
-                        <span class="input-group-search">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-                        </span>
-                        <input type="search" class="search-input w-100"
-                            placeholder="Search for Movies, Events, Plays, Sports and Activities"
-                            aria-label="Search for Movies, Events, Plays, Sports and Activities">
-                    </div>
-                </form>
-            </div>
-
-            <div class="drop">
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Kochi
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">kollam</a></li>
-                        <li><a class="dropdown-item" href="#">trissur</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="sign">
-                <a href="">Sign in</a>
-            </div>
-            <div class="ic">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg>
-            </div>
-        </div>
+  <div class="topnav">
+    <img src="img/bookmyshow-logo-vector.png" alt="img1 " width="120px">
+    <form>
+      <div class="search">
+        <span class="search-icon material-symbols-outlined">search</span>
+        <input class="search-input" type="text" placeholder="Search for Movies,Event,Plays,Sports and Activies ">
+      </div>
+    </form>
+    <div class="location">
+      <p>Kochi <span class=" arrow material-symbols-outlined"> keyboard_arrow_down</span></p>
     </div>
-    <div class="list">
-        <div class="list1">
-            <div class="bb">
-                <ul style="list-style-type: none;">
-                    <li><a href="">Movies</a></li>
-                    <li><a href="">Stream</a></li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Plays</a></li>
-                    <li><a href="">Sports</a></li>
-                    <li><a href="">Activities</a></li>
-                </ul>
-            </div>
-            <div class="bb1">
-                <ul style="list-style-type: none;">
-                    <li><a href="">List your show</a></li>
-                    <li><a href="">Corporates</a></li>
-                    <li><a href="">Offers</a></li>
-                    <li><a href="">Gift cards</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="signup">
+      <button type="button" class="btn1">Sign in</button>
     </div>
-    <div class="slide">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/slide1.avif" class="d-block w-100" alt="slide1" height="400px">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/slide2.avif" class="d-block w-100" alt="slide2" height="400px">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/slide3.avif" class="d-block w-100" alt="slide3" height="400px">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-    </div>
-    <div class="bg">
-        <div class="main1">
-            <h1>Recommended Movies</h1>
-            <div class="mov">
-                <div class="mov1">
-                    <a href=""><img class="movie" src="images/mov1.avif" alt="mov1" height="520px"></a>
-                    <a href="">
-                        <h4>A.R.M</h1>
-                    </a>
-                    <a href="">
-                        <p>Action/Adventure/Drama/Period</p>
-                    </a>
-                </div>
-                <div class="mov2">
-                    <a href=""><img class="movie" src="images/mov2.avif" alt="mov2" height="520px"></a>
-                    <a href="">
-                        <h4>Kishkindha Kaandam</h1>
-                    </a>
-                    <a href="">
-                        <p>Mystery/Thriller</p>
-                    </a>
-                </div>
-                <div class="mov3">
-                    <a href=""><img class="movie" src="images/mov3.avif" alt="mov3" height="520px"></a>
-                    <a href="">
-                        <h4>Joker: Folie a Deux</h1>
-                    </a>
-                    <a href="">
-                        <p>Drama/Suspense/Thriller</p>
-                    </a>
-                </div>
-                <div class="mov4">
-                    <a href=""><img class="movie" src="images/mov4.avif" alt="mov4" height="520px"></a>
-                    <a href="">
-                        <h4>Kondal</h1>
-                    </a>
-                    <a href="">
-                        <p>Action/Crime/Drama</p>
-                    </a>
-                </div>
-                <div class="mov5">
-                    <a href=""><img class="movie" src="images/mov5.avif" alt="mov5" height="520px"></a>
-                    <a href="">
-                        <h4>Bad Boyz</h1>
-                    </a>
-                    <a href="">
-                        <p>Action/Comedy</p>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="main3">
-            <img src="images/img1.avif" alt="img1" width="1680px">
-        </div>
-        <div class="main4">
-            <h1>The Best of Live Events</h1>
-            <img class="hh" src="images/img2.avif" alt="img2">
-            <img class="hh" src="images/img3.avif" alt="img3">
-            <img class="hh" src="images/img4.avif" alt="img4">
-            <img class="hh" src="images/img5.avif" alt="img5">
-            <img class="hh" src="images/img6.avif" alt="img6">
-        </div>
-        <div class="main5">
-            <div class="jjj">
-                <img src="images/premiere.avif" alt="premiere" width="100%">
-                <h3>Premieres</h3>
-                <p>Brand new releases every Friday</p>
-            </div>
-            <div class="jj">
-                <div class="prem">
-                    <div class="mov1">
-                        <a href=""><img class="movie" src="images/img7.avif" alt="img7" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>Gondola</h1>
-                        </a>
-                        <a href="">
-                            <p>Comedy,Drama,Romantic</p>
-                        </a>
-                    </div>
-                    <div class="mov2">
-                        <a href=""><img class="movie" src="images/img8.avif" alt="img8" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>Tuesday</h1>
-                        </a>
-                        <a href="">
-                            <p>Drama,Fantasy</p>
-                        </a>
-                    </div>
-                    <div class="mov3">
-                        <a href=""><img class="movie" src="images/img9.avif" alt="img9" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>Trap (2024)</h1>
-                        </a>
-                        <a href="">
-                            <p>Crime,Mystery,Thriller</p>
-                        </a>
-                    </div>
-                    <div class="mov4">
-                        <a href=""><img class="movie" src="images/img10.avif" alt="img10" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>Jolly LLB 2</h1>
-                        </a>
-                        <a href="">
-                            <p>Comedy/Drama</p>
-                        </a>
-                    </div>
-                    <div class="mov5">
-                        <a href=""><img class="movie" src="images/img11.avif" alt="img11" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>M.S. Dhoni: The Untold Story</h1>
-                        </a>
-                        <a href="">
-                            <p>Biography,Drama</p>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="main6">
-            <h1>Your Music Studio</h1>
-            <div class="mus">
-                <div class="mov1">
-                    <a href=""><img class="movie" src="images/img12.avif" alt="img12" height="520px"></a>
-                    <a href="">
-                        <h4>Shillong Cherry Blossom Festival 2024</h1>
-                    </a>
-                    <a href="">
-                        <p>RBDSA Sports Complex: Shillong concerts</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-                <div class="mov2">
-                    <a href=""><img class="movie" src="images/img13.avif" alt="img13" height="520px"></a>
-                    <a href="">
-                        <h4>BRILLANTE PIANO FESTIVAL - Kochi Chapter</h1>
-                    </a>
-                    <a href="">
-                        <p>JT Performing Arts Centre: Kochi</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-                <div class="mov3">
-                    <a href=""><img class="movie" src="images/img14.avif" alt="img14" height="520px"></a>
-                    <a href="">
-                        <h4>Open Air Kochi</h1>
-                    </a>
-                    <a href="">
-                        <p>Crowne Plaza :Kochi</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-                <div class="mov4">
-                    <a href=""><img class="movie" src="images/img15.avif" alt="img15" height="520px"></a>
-                    <a href="">
-                        <h4>Bandland 2024</h1>
-                    </a>
-                    <a href="">
-                        <p>Nice Grounds, BIEC: Bengaluru</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-                <div class="mov5">
-                    <a href=""><img class="movie" src="images/img16.avif" alt="img16" height="520px"></a>
-                    <a href="">
-                        <h4>Lollapalooza India 2025</h1>
-                    </a>
-                    <a href="">
-                        <p>Mumbai</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="main7">
-            <h2>Trending Searches Right Now</h2>
-            <div class="trending ">
-                <div class="rows">
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>A.R.M</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Kishkindha Kaandam</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Joker:Folie a Deux</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Meiyazhagan</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Bougainvillea</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Tumbbad</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="rows">
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Sunburn Arena Ft.Alan Walker - Kochi</h5>
-                            <p>Events</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Devara - Part 1</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Lubber Pandhu</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="foot1">
-            <div class="ff1">
-                <img src="images/hut.svg" alt="hut">
-            </div>
-            <div class="ff2">
-               <p><b>List your Show</b> </p>
-            </div>
-            <div class="ff3">
-                <p>Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow</p>
-            </div>
-            <div class="ff4">
-                
-                    <a href="">Condact Today!</a>
-                
-            </div>
-            
-        </div>
-
+    <div class="menu">
+      <span class="material-symbols-outlined">menu</span>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+  </div>
+  <div class="secnav">
 
+    <ul class="navitem">
+
+      <li><a href="#">Movies</a></li>
+
+
+      <li> <a href="#">Stream</a></li>
+
+
+      <li> <a href="#">Events</a></li>
+
+
+      <li> <a href="#">Plays</a></li>
+
+
+      <li> <a href="#">Sports</a></li>
+
+
+      <li> <a href="#">Activies</a></li>
+
+    </ul>
+    <ul class="navitem1">
+      <li><a href="#">ListYourShow</a></li>
+      <li><a href="#">Corparates</a></li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="#">Gift Cards</a></li>
+    </ul>
+
+  </div>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/1726036566435_playcardnewweb.avif" class="d-block w-100" alt="img2">
+          </div>
+          <div class="carousel-item">
+            <img src="img/1732187229580_22novtransformersoneweb.avif" class="d-block w-100" alt="img3">
+          </div>
+          <!-- <div class="carousel-item">
+            <img src="images/1727183946057_kochialanwalker20241240x300.avif" class="d-block w-100" alt="img4">
+          </div>
+          <div class="carousel-item">
+            <img src="images/1725875022915_webbannerlineup.avif" class="d-block w-100" alt="img5">
+          </div> -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="movie-cover">
+    <h1 class="title">Recommended Movies</h1>
+    <div class="movies-list">
+      <div class="card-container">
+        <div class="movie">
+          <div class="card">
+            <img src="img/sookshma.avif" alt="car-1">
+          </div>
+          <h3> Devara-part 1</h3>
+          <p class="detail">Action/Drama/Thriller</p>
+        </div>
+        <div class="movie">
+          <div class="card">
+            <img src="img/amaran.avif" alt="car-2">
+          </div>
+          <h3> Kishkindha Kaandam</h3>
+          <p class="detail">
+            Mystery,Thriller</p>
+        </div>
+        <div class="movie">
+          <div class="card">
+            <img src="img/anand.avif" alt="car-3">
+          </div>
+          <h3> A.R.M</h3>
+          <p class="detail">
+            Action,Adventure,Drama,Period
+          </p>
+        </div>
+        <div class="movie">
+            <div class="card">
+              <img src="img/luckeybasker.avif" alt="car-3">
+            </div>
+            <h3> A.R.M</h3>
+            <p class="detail">
+              Action,Adventure,Drama,Period
+            </p>
+          </div>
+        <div class="movie">
+          <div class="card">
+            <img src="img/mummy.avif" alt="car-4">
+          </div>
+          <h3> Joker: Folie a Deux</h3>
+          <p class="detail">
+            Drama,Suspens,Thriller
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="strip">
+      <img src="img/stream-leadin-web-collection-202210241242.avif" style="height: 105px; width: 85%;" alt="">
+    </div>
+    <h1 class="title-enter">The Best Of Live Events</h1>
+  </div>
+  <div class="enter-list">
+    <div class="enter-container">
+      <div class="card">
+        <img src="img/bmshp-desktop-amusement-park-collection-202404190106.avif" alt="5">
+      </div>
+      <div class="card">
+        <img src="img/workshop-and-more-web-collection-202211140440.avif" alt="1">
+      </div>
+      <div class="card">
+        <img src="img/bmshp-desktop-kids-collection-202404190106.avif" alt="2">
+      </div>
+      <div class="card">
+        <img src="img/comedy-shows-collection-202211140440.avif" alt="3">
+      </div>
+      <div class="card">
+        <img src="img/music-shows-collection-202211140440.avif" alt="4">
+      </div>
+    </div>
+    <h1 class="title-enter1">Your Music Studio</h1>
+  </div>
+  <div class="studio">
+    <div class="music-list">
+      <div class="music-name">
+        <div class="card">
+          <img src="img/et00420584-wdjzknlqzn-portrait.avif" alt="m1">
+        </div>
+        <h3>Sunburn Arena Ft. Alan Walker - Kochi</h3>
+        <p class="venue">Bolgatty Palace and Island Resort:Kochi
+        <p>Concerts</p>
+        </p>
+      </div>
+      <div class="music-name">
+        <div class="card">
+          <img src="img/et00406791-fdakfzlsqw-portrait.avif" alt="m2">
+        </div>
+        <h3>Shillong Cherry Blossom Festival 2024</h3>
+        <p>RBDSA Sports Complex: Shillong
+        <p>Concerts</p>
+        </p>
+      </div>
+      <div class="music-name">
+        <div class="card">
+          <img src="img/et00417872-qfxvewtpqy-portrait.avif" alt="m3">
+        </div>
+        <h3>BRILLANTE PIANO FESTIVAL - Kochi Chapter</h3>
+        <p>Mumbai</p>
+        <p>Concerts</p>
+      </div>
+      <div class="music-name">
+        <div class="card">
+          <img src="img/et00417872-qfxvewtpqy-portrait.avif" alt="m3">
+        </div>
+        <h3>BRILLANTE PIANO FESTIVAL - Kochi Chapter</h3>
+        <p>Mumbai</p>
+        <p>Concerts</p>
+      </div>
+      <div class="music-name">
+        <div class="card">
+          <img src="img/et00409511-ttxxnurgvg-portrait.avif" alt="m4">
+        </div>
+        <h3>Open Air Kochi</h3>
+        <p>Crown Plaza: Kochi</p>
+        <p>Concerts</p>
+      </div>
+    </div>
+    <h1 class="title-enter2">Outdoor Events</h1>
+  </div>
+  <div class="outdoor-event">
+    <div class="outdoor-list">
+      <div class="outdoor-name">
+        <div class="card">
+          <img src="img/et00418434-ffsbevmgar-portrait.avif" alt="o1">
+        </div>
+        <h3>Shillong Cherry Blossom Festival 2024</h3>
+        <p>RBDSA Sports Complex: Shillong</p>
+      </div>
+      <div class="outdoor-name">
+        <div class="card">
+          <img src="img/et00420584-wdjzknlqzn-portrait (1).avif" alt="o1">
+        </div>
+        <h3>Wonderla Amusement Park Kochi</h3>
+        <p>Wonderla:Kochi</p>
+      </div>
+      <div class="outdoor-name">
+        <div class="card">
+          <img src="img/et00419469-egywqddhgs-portrait.avif" alt="o2">
+        </div>
+        <h3>Death by Laughter ft. Vivek Muralidharan</h3>
+        <p>Just BLR Comedy Club:Bengaluru</p>
+      </div>
+      <div class="outdoor-name">
+        <div class="card">
+          <img src="img/et00419018-hyryszrevz-portrait.avif" alt="o3">
+        </div>
+        <h3>Abhishek Upmanyu LIVE 2025 - Kochi</h3>
+        <p>JT performing Arts Center:Kochi</p>
+      </div>
+      <div class="outdoor-name">
+        <div class="card">
+          <img src="img/et00063784-mfepbaukjx-portrait.avif" alt="o3">
+        </div>
+        <h3>Abhishek Upmanyu LIVE 2025 - Kochi</h3>
+        <p>JT performing Arts Center:Kochi</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-detail">
+      <img src="images/hut.svg" alt="h1" class="hut" style="padding-right: 10px;">
+      <h1 class="lt"> List Your Show</h1>
+      <p>Got a show,event,activiy or a great experience?Partner with us & get listed on BookMyShow</p>
+      <button class="btn2 ">Contact today!</button>
+    </div>
+  </div>
+  <div class="footer1">
+    <div class="footer-support">
+      <div class="cust-icon">
+        <img src="images/call1-removebg-preview.png" alt="c1" style="width: 75px; height: 75px  ;">
+        <p>24/7 CUSTOMER CARE</p>
+      </div>
+      <div class="cust-icon">
+        <img src="images/images-removebg-preview.png" alt="c2" style="width: 75px; height: 75px;">
+        <p>RESEND BOOKING CONFIRMATION</p>
+      </div>
+      <div class="cust-icon">
+        <img src="images/msg1-removebg-preview.png" alt="c3" style="width: 75px; height: 75px;">
+        <p>SUBSCRIBE TO THE NEWSLETTER</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer2">
+    <div class="info">
+      <h4>MOVIES NOW SHOWING IN KOCHI</h4>
+      <P>Joker:Folie a Deux|A.R.M|Kishkindha Kaandam|Devara - Part 1|Meiyazhagan|Chithini</P><br>
+      <h4>UPCOMMING MOVIES IN KOCHI</h4>
+      <p>The Legend Of Maula Jatt|Bhairadevi|Chitti Potti|Bahirbhoomi|Ramnagar Bunny</p><br>
+      <h4>MOVIES BY GENRE</h4>
+      <p>Drama Movies|Action Movies|Thriller Movies|Comedy Movies|Crime Movies|Horror Movies</p><br>
+      <h4>MOVIES BY LANGUAGE</h4>
+      <p>Movies in Malayalam|Movies in Tamil|Movies in Hindi|Movies in Telugu|Movies in Kanada</p><br>
+      <h4>SPORTS EVENTS IN KOCHI</h4>
+      <p>Running|Chess|Basketball|Cricket|Cycling|E Sports|Football</p><br>
+      <h4>PLAYS IN TOP CITIES</h4>
+      <p>Plays in Mumbai|Plays in Chennai|Plays in Bengaluru|Plays in Pune|Plays in Kochi</p><br>
+      <h4>COUNTRIES </h4>
+      <p>Indonesia|Singapore|UAE|Sri Lanka|West Indies</p><br>
+      <h4>HELP</h4>
+      <p>About us|Contact us|Current Opening|Press Coverage|Sitemap|FAQs|Terms and Conditions|Privacy Policy</p><br>
+      <h4>BOOKMYSHOW EXCLUSIVES</h4>
+      <p>Lollapalooza india|Super Star|Book A Change|Corporate Vouchers|Gift Cards|List My Show|Offers|Streams|Trailers</p>
+    </div>
+    <div class="line"></div>
+    <div class="bms">
+      <img src="images/logo.svg" alt="s1">
+     </div>
+    <div class="ss">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sequi sint quaerat impedit maiores dicta quae magnam. Dolorum, ullam. Hic aspernatur nostrum voluptates ratione voluptate voluptas quis sunt ad pariatur?
+    </div>
+  </div>
+  
+  
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
