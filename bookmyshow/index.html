@@ -1,12 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book My Show</title>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="main"></div>
+    <div class="main">
+        <div class="aa">
+            <div class="logo">
+                <img src="img/bookmyshow-logo-vector.png" alt="bookmyshow-logo-vector" width="180px" height="100px">
+            </div>
+
+            <div class="search">
+                <form class="search-form">
+                    <div class="input-group">
+                        <span class="input-group-search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </span>
+                        <input type="search" class="search-input w-100"
+                            placeholder="Search for Movies, Events, Plays, Sports and Activities"
+                            aria-label="Search for Movies, Events, Plays, Sports and Activities">
+                    </div>
+                </form>
+            </div>
+
+            <div class="drop">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Kochi
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">kollam</a></li>
+                        <li><a class="dropdown-item" href="#">trissur</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sign">
+                <a href="">Sign in</a>
+            </div>
+            <div class="ic">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="list">
+        <div class="list1">
+            <div class="bb">
+                <ul style="list-style-type: none;">
+                    <li><a href="">Movies</a></li>
+                    <li><a href="">Stream</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Plays</a></li>
+                    <li><a href="">Sports</a></li>
+                    <li><a href="">Activities</a></li>
+                </ul>
+            </div>
+            <div class="bb1">
+                <ul style="list-style-type: none;">
+                    <li><a href="">List your show</a></li>
+                    <li><a href="">Corporates</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Gift cards</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/slide1.avif" class="d-block w-100" alt="slide1" height="400px">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/slide2.avif" class="d-block w-100" alt="slide2" height="400px">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/slide3.avif" class="d-block w-100" alt="slide3" height="400px">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+    <div class="bg">
+        <div class="main1">
+            <h1>Recommended Movies</h1>
+            <div class="mov">
+                <div class="mov1">
+                    <a href=""><img class="movie" src="images/mov1.avif" alt="mov1" height="520px"></a>
+                    <a href="">
+                        <h4>A.R.M</h1>
+                    </a>
+                    <a href="">
+                        <p>Action/Adventure/Drama/Period</p>
+                    </a>
+                </div>
+                <div class="mov2">
+                    <a href=""><img class="movie" src="images/mov2.avif" alt="mov2" height="520px"></a>
+                    <a href="">
+                        <h4>Kishkindha Kaandam</h1>
+                    </a>
+                    <a href="">
+                        <p>Mystery/Thriller</p>
+                    </a>
+                </div>
+                <div class="mov3">
+                    <a href=""><img class="movie" src="images/mov3.avif" alt="mov3" height="520px"></a>
+                    <a href="">
+                        <h4>Joker: Folie a Deux</h1>
+                    </a>
+                    <a href="">
+                        <p>Drama/Suspense/Thriller</p>
+                    </a>
+                </div>
+                <div class="mov4">
+                    <a href=""><img class="movie" src="images/mov4.avif" alt="mov4" height="520px"></a>
+                    <a href="">
+                        <h4>Kondal</h1>
+                    </a>
+                    <a href="">
+                        <p>Action/Crime/Drama</p>
+                    </a>
+                </div>
+                <div class="mov5">
+                    <a href=""><img class="movie" src="images/mov5.avif" alt="mov5" height="520px"></a>
+                    <a href="">
+                        <h4>Bad Boyz</h1>
+                    </a>
+                    <a href="">
+                        <p>Action/Comedy</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="main3">
+            <img src="images/img1.avif" alt="img1" width="1680px">
+        </div>
+        <div class="main4">
+            <h1>The Best of Live Events</h1>
+            <img class="hh" src="images/img2.avif" alt="img2">
+            <img class="hh" src="images/img3.avif" alt="img3">
+            <img class="hh" src="images/img4.avif" alt="img4">
+            <img class="hh" src="images/img5.avif" alt="img5">
+            <img class="hh" src="images/img6.avif" alt="img6">
+        </div>
+        <div class="main5">
+            <div class="jjj">
+                <img src="images/premiere.avif" alt="premiere" width="100%">
+                <h3>Premieres</h3>
+                <p>Brand new releases every Friday</p>
+            </div>
+            <div class="jj">
+                <div class="prem">
+                    <div class="mov1">
+                        <a href=""><img class="movie" src="images/img7.avif" alt="img7" height="520px"
+                                width="320px"></a>
+                        <a href="">
+                            <h4>Gondola</h1>
+                        </a>
+                        <a href="">
+                            <p>Comedy,Drama,Romantic</p>
+                        </a>
+                    </div>
+                    <div class="mov2">
+                        <a href=""><img class="movie" src="images/img8.avif" alt="img8" height="520px"
+                                width="320px"></a>
+                        <a href="">
+                            <h4>Tuesday</h1>
+                        </a>
+                        <a href="">
+                            <p>Drama,Fantasy</p>
+                        </a>
+                    </div>
+                    <div class="mov3">
+                        <a href=""><img class="movie" src="images/img9.avif" alt="img9" height="520px"
+                                width="320px"></a>
+                        <a href="">
+                            <h4>Trap (2024)</h1>
+                        </a>
+                        <a href="">
+                            <p>Crime,Mystery,Thriller</p>
+                        </a>
+                    </div>
+                    <div class="mov4">
+                        <a href=""><img class="movie" src="images/img10.avif" alt="img10" height="520px"
+                                width="320px"></a>
+                        <a href="">
+                            <h4>Jolly LLB 2</h1>
+                        </a>
+                        <a href="">
+                            <p>Comedy/Drama</p>
+                        </a>
+                    </div>
+                    <div class="mov5">
+                        <a href=""><img class="movie" src="images/img11.avif" alt="img11" height="520px"
+                                width="320px"></a>
+                        <a href="">
+                            <h4>M.S. Dhoni: The Untold Story</h1>
+                        </a>
+                        <a href="">
+                            <p>Biography,Drama</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="main6">
+            <h1>Your Music Studio</h1>
+            <div class="mus">
+                <div class="mov1">
+                    <a href=""><img class="movie" src="images/img12.avif" alt="img12" height="520px"></a>
+                    <a href="">
+                        <h4>Shillong Cherry Blossom Festival 2024</h1>
+                    </a>
+                    <a href="">
+                        <p>RBDSA Sports Complex: Shillong concerts</p>
+                    </a>
+                    <a href="">
+                        <p>Concerts</p>
+                    </a>
+                </div>
+                <div class="mov2">
+                    <a href=""><img class="movie" src="images/img13.avif" alt="img13" height="520px"></a>
+                    <a href="">
+                        <h4>BRILLANTE PIANO FESTIVAL - Kochi Chapter</h1>
+                    </a>
+                    <a href="">
+                        <p>JT Performing Arts Centre: Kochi</p>
+                    </a>
+                    <a href="">
+                        <p>Concerts</p>
+                    </a>
+                </div>
+                <div class="mov3">
+                    <a href=""><img class="movie" src="images/img14.avif" alt="img14" height="520px"></a>
+                    <a href="">
+                        <h4>Open Air Kochi</h1>
+                    </a>
+                    <a href="">
+                        <p>Crowne Plaza :Kochi</p>
+                    </a>
+                    <a href="">
+                        <p>Concerts</p>
+                    </a>
+                </div>
+                <div class="mov4">
+                    <a href=""><img class="movie" src="images/img15.avif" alt="img15" height="520px"></a>
+                    <a href="">
+                        <h4>Bandland 2024</h1>
+                    </a>
+                    <a href="">
+                        <p>Nice Grounds, BIEC: Bengaluru</p>
+                    </a>
+                    <a href="">
+                        <p>Concerts</p>
+                    </a>
+                </div>
+                <div class="mov5">
+                    <a href=""><img class="movie" src="images/img16.avif" alt="img16" height="520px"></a>
+                    <a href="">
+                        <h4>Lollapalooza India 2025</h1>
+                    </a>
+                    <a href="">
+                        <p>Mumbai</p>
+                    </a>
+                    <a href="">
+                        <p>Concerts</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="main7">
+            <h2>Trending Searches Right Now</h2>
+            <div class="trending ">
+                <div class="rows">
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>A.R.M</h5>
+                            <p>Movies</p>
+                        </div>
+                    </div>
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>Kishkindha Kaandam</h5>
+                            <p>Movies</p>
+                        </div>
+                    </div>
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>Joker:Folie a Deux</h5>
+                            <p>Movies</p>
+                        </div>
+                    </div>
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>Meiyazhagan</h5>
+                            <p>Movies</p>
+                        </div>
+                    </div>
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>Bougainvillea</h5>
+                            <p>Movies</p>
+                        </div>
+                    </div>
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>Tumbbad</h5>
+                            <p>Movies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>Sunburn Arena Ft.Alan Walker - Kochi</h5>
+                            <p>Events</p>
+                        </div>
+                    </div>
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>Devara - Part 1</h5>
+                            <p>Movies</p>
+                        </div>
+                    </div>
+
+                    <div class="rows allignment">
+                        <div class="gg">
+                            <h5>Lubber Pandhu</h5>
+                            <p>Movies</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot1">
+            <div class="ff1">
+                <img src="images/hut.svg" alt="hut">
+            </div>
+            <div class="ff2">
+               <p><b>List your Show</b> </p>
+            </div>
+            <div class="ff3">
+                <p>Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow</p>
+            </div>
+            <div class="ff4">
+                
+                    <a href="">Condact Today!</a>
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
