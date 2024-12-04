@@ -126,27 +126,19 @@ ul.navitem1 li {
     background-color: whitesmoke;
 }
 
-/* 
-.carousel-items{
-position: relative;
-border-radius: 5px;
-width: 100%;
-height: 100%;
-} */
 
 .carousel-inner {
     margin-right: 10px;
     margin-left: 10px;
     position: relative;
-    border-radius: 5px;
+    border-radius: 15px;
     width: 200%;
     height: 100%;
     transition: 1s;
-    overflow: hidden;
+    overflow:hidden;
     background-color: rgba(0, 0, 0, 0.5);
 
 }
-
 .carousel-item img {
     width: 100%;
     height: 100%;
@@ -274,7 +266,7 @@ height: 100%;
     width: 100%;
     height: 500px;
     position: relative;
-    padding-left: 150px;
+    padding-left: 100px;
     padding-top: 120px;
 }
 
