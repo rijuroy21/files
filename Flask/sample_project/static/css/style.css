@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(111, 149, 156);
+}
+img{
+    width: 500px;
+    height: 300px;
+    padding-right: 100px;
+}
+h1{
+    color: #f5e5d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
