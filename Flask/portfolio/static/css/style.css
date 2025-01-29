@@ -52,18 +52,23 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 500px;
     padding: 0 50px;
+    background-image: url('../images/background1.jpg');
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
 }
 
 #home .content h1 {
     font-size: 3rem;
     line-height: 1.4;
     font-weight: bold;
+   
 }
 
 #home .content h1 span {
-    color: #f39c12;
+    color: #ffffff;
 }
 
 #home .image img {
