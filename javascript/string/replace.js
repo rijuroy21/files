@@ -1,0 +1,10 @@
+let str="Good morning Good"
+console.log(str)
+a=str.replace('morning','afternoon')
+console.log(a)
+b=str.replaceAll('Good','bad')
+console.log(b)
+c=str.toLowerCase()
+console.log(c)
+d=str.toUpperCase()
+console.log(d)

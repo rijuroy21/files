@@ -9,18 +9,17 @@ def fun1():
 
 @app.route("/view_resume")
 def view_resume():
-    return send_from_directory(directory="static/images", path="resume.pdf")
+    return send_from_directory(directory="static/images", path="Riju Roy cv.pdf")
 
 
 @app.route('/submit', methods=['POST'])
 def submit_form():
-    # Get data from the form
+  
     name = request.form['name']
     email = request.form['email']
     subject = request.form['subject']
     message = request.form['message']
     
-    # Store data into the database
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS contact (
@@ -33,8 +32,7 @@ def submit_form():
                    (name, email, subject, message))
     conn.commit()
     conn.close()
-    
-    # Redirect to thank you page or a success message
+
     return redirect('/')
 
 app.run()
