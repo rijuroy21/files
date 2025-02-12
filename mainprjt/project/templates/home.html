@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Designers & Developers</title>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>Find the Best Designers & Developers</h1>
+    <p>Connect with top talent to bring your ideas to life.</p>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for skills, designers, developers...">
+      <button id="searchButton">Search</button>
+  </div>
+  <script>
+    document.getElementById("searchButton").addEventListener("click", function() {
+        let query = document.getElementById("searchInput").value.toLowerCase();
+        let profiles = document.querySelectorAll(".profile");
+    
+        profiles.forEach(profile => {
+            let name = profile.querySelector("h3").textContent.toLowerCase();
+            let role = profile.querySelector("p").textContent.toLowerCase();
+    
+            if (name.includes(query) || role.includes(query)) {
+                profile.style.display = "block"; // Show matching profiles
+            } else {
+                profile.style.display = "none"; // Hide non-matching profiles
+            }
+        });
+    });
+    </script>
+    
+  </header>
+
+  <section class="categories">
+    <h2>Explore Categories</h2>
+    <div class="category-list">
+      <div class="category">UI/UX Design</div>
+      <div class="category">Web Design</div>
+      <div class="category">Graphic Design</div>
+      <div class="category">Full Stack Development</div>
+      <div class="category">Mobile App Development</div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <h2>Featured Professionals</h2>
+    <div class="profiles">
+      <div class="profile">
+        <img src="{% static 'images/designer.jpg' %}" alt="Designer">
+        <h3>Riju</h3>
+        <p>UI/UX Designer</p>
+        <button>View Profile</button>
+      </div>
+      <div class="profile">
+        <img src="{% static 'images/developer.jpg' %}" alt="Developer">
+        <h3>Shino</h3>
+        <p>Full Stack Developer</p>
+        <button>View Profile</button>
+      </div>
+      <div class="profile">
+        <img src="{% static 'images/developer.jpg' %}" alt="Developer">
+        <h3>Adith</h3>
+        <p>web Designer</p>
+        <button>View Profile</button>
+      </div>
+      <div class="profile">
+        <img src="{% static 'images/developer.jpg' %}" alt="Developer">
+        <h3>Hari</h3>
+        <p>Graphic Designers</p>
+        <button>View Profile</button>
+      </div>
+      <div class="profile">
+        <img src="{% static 'images/developer.jpg' %}" alt="Developer">
+        <h3>Anit</h3>
+        <p>Graphic Designers</p>
+        <button>View Profile</button>
+      </div>
+      
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HireTalent. Find the best professionals today!</p>
+  </footer>
+</body>
+
+</html>
