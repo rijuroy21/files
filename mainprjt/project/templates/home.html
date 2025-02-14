@@ -11,32 +11,64 @@
 
 <body>
 
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">HireTalent</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="{% url 'categories' %}">Categories</a></li>
+      <li><a href="#">Find Talent</a></li>
+      <li><a href="#">How It Works</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="join-btn">Join</button>
+  </nav>
+
   <header class="hero">
     <h1>Find the Best Designers & Developers</h1>
     <p>Connect with top talent to bring your ideas to life.</p>
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Search for skills, designers, developers...">
       <button id="searchButton">Search</button>
-  </div>
+    </div>
+  </header>
+
   <script>
     document.getElementById("searchButton").addEventListener("click", function() {
         let query = document.getElementById("searchInput").value.toLowerCase();
         let profiles = document.querySelectorAll(".profile");
-    
+        let found = false;
+
         profiles.forEach(profile => {
             let name = profile.querySelector("h3").textContent.toLowerCase();
             let role = profile.querySelector("p").textContent.toLowerCase();
-    
+
             if (name.includes(query) || role.includes(query)) {
                 profile.style.display = "block"; // Show matching profiles
+                found = true;
             } else {
                 profile.style.display = "none"; // Hide non-matching profiles
             }
         });
+
+        let noResultsMessage = document.getElementById("noResultsMessage");
+
+        if (!found) {
+            if (!noResultsMessage) {
+                noResultsMessage = document.createElement("p");
+                noResultsMessage.id = "noResultsMessage";
+                noResultsMessage.textContent = "No results found.";
+                noResultsMessage.style.color = "red";
+                noResultsMessage.style.textAlign = "center";
+                document.querySelector(".profiles").appendChild(noResultsMessage);
+            }
+        } else {
+            if (noResultsMessage) {
+                noResultsMessage.remove();
+            }
+        }
     });
-    </script>
-    
-  </header>
+  </script>
 
   <section class="categories">
     <h2>Explore Categories</h2>
@@ -67,28 +99,28 @@
       <div class="profile">
         <img src="{% static 'images/developer.jpg' %}" alt="Developer">
         <h3>Adith</h3>
-        <p>web Designer</p>
+        <p>Web Designer</p>
         <button>View Profile</button>
       </div>
       <div class="profile">
         <img src="{% static 'images/developer.jpg' %}" alt="Developer">
         <h3>Hari</h3>
-        <p>Graphic Designers</p>
+        <p>Graphic Designer</p>
         <button>View Profile</button>
       </div>
       <div class="profile">
         <img src="{% static 'images/developer.jpg' %}" alt="Developer">
         <h3>Anit</h3>
-        <p>Graphic Designers</p>
+        <p>Graphic Designer</p>
         <button>View Profile</button>
       </div>
-      
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 HireTalent. Find the best professionals today!</p>
   </footer>
+
 </body>
 
 </html>

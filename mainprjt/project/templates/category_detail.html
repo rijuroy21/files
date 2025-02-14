@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category_slug|title }} - HireTalent</title>
+    <link rel="stylesheet" href="{% static 'css/category_detail.css' %}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">HireTalent</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'categories' %}">Categories</a></li>
+            <li><a href="#">Find Talent</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="join-btn">Join</button>
+    </nav>
+
+    <section class="category-detail">
+        <h1>{{ category_slug|title }}</h1>
+        <p>Explore top professionals in {{ category_slug|title }}.</p>
+
+        <ul class="subcategory-list">
+            {% for subcategory in subcategories %}
+                <li>{{ subcategory }}</li>
+            {% empty %}
+                <p>No subcategories found.</p>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'categories' %}" class="back-button">← Back to Categories</a>
+    </section>
+
+</body>
+</html>
