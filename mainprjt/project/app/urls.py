@@ -6,7 +6,9 @@ urlpatterns=[
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('', views.home, name='home'),
+    path('contact/', views.contact, name='contact'),
+    path('how_it_works/', views.how_it_works, name='how_it_works'),
     path('categories/', views.categories, name='categories'),
-    path('categories/', views.categories, name='categories'),
-    path('categories/<slug:category_slug>/', views.category_detail, name='category_detail'),
+    path('categories/<int:category_id>/', views.category_detail, name='category_detail'),
+    path('subcategories/<int:subcategory_id>/', views.subcategory_detail, name='subcategory_detail'),
 ]

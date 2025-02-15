@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ category_slug|title }} - HireTalent</title>
+    <title>{{ category.name }} - HireTalent</title>
     <link rel="stylesheet" href="{% static 'css/category_detail.css' %}">
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
@@ -16,26 +18,30 @@
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'categories' %}">Categories</a></li>
             <li><a href="#">Find Talent</a></li>
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
         <button class="join-btn">Join</button>
     </nav>
 
+    <header class="hero">
+        <h1>{{ category.name }}</h1>
+        <p>Explore top professionals in {{ category.name }}.</p>
+    </header>
+    <!-- Category Detail -->
     <section class="category-detail">
-        <h1>{{ category_slug|title }}</h1>
-        <p>Explore top professionals in {{ category_slug|title }}.</p>
-
-        <ul class="subcategory-list">
+        <ul>
             {% for subcategory in subcategories %}
-                <li>{{ subcategory }}</li>
-            {% empty %}
-                <p>No subcategories found.</p>
+            <li><a href="{% url 'subcategory_detail' subcategory.id %}">{{ subcategory.name }}</a></li>
             {% endfor %}
         </ul>
-
         <a href="{% url 'categories' %}" class="back-button">← Back to Categories</a>
     </section>
 
+    <footer>
+        <p>&copy; 2025 HireTalent. Connecting you with top professionals.</p>
+    </footer>
+
 </body>
+
 </html>

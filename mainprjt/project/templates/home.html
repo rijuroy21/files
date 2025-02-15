@@ -18,8 +18,8 @@
       <li><a href="#">Home</a></li>
       <li><a href="{% url 'categories' %}">Categories</a></li>
       <li><a href="#">Find Talent</a></li>
-      <li><a href="#">How It Works</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
     </ul>
     <button class="join-btn">Join</button>
   </nav>
@@ -70,7 +70,7 @@
     });
   </script>
 
-  <section class="categories">
+  <!-- <section class="categories">
     <h2>Explore Categories</h2>
     <div class="category-list">
       <div class="category">UI/UX Design</div>
@@ -79,7 +79,7 @@
       <div class="category">Full Stack Development</div>
       <div class="category">Mobile App Development</div>
     </div>
-  </section>
+  </section> -->
 
   <section class="featured">
     <h2>Featured Professionals</h2>

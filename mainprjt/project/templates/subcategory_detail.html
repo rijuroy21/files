@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/subcategory_detail.css' %}">
+</head>
+
+<body>
+    <h1>{{ subcategory.name }} Professionals</h1>
+    {% if freelancers %}
+    <ul>
+        {% for freelancer in freelancers %}
+        <li>{{ freelancer.name }} - {{ freelancer.skills }} ({{ freelancer.experience }} years experience)</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No freelancers found in this subcategory.</p>
+    {% endif %}
+    <a href="{% url 'category_detail' subcategory.category.id %}">← Back to {{ subcategory.category.name }}</a>
+
+</body>
+
+</html>

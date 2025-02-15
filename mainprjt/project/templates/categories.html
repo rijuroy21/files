@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -7,6 +8,7 @@
     <title>Categories - HireTalent</title>
     <link rel="stylesheet" href="{% static 'css/categories.css' %}">
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
@@ -16,31 +18,34 @@
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'categories' %}">Categories</a></li>
             <li><a href="#">Find Talent</a></li>
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
         <button class="join-btn">Join</button>
     </nav>
 
     <header class="hero">
-        <h1>Discover Top Talent Across Creative Categories</h1>
-        <p>Explore diverse categories and find expert professionals to turn your vision into reality</p>
+        <h1>Explore Categories</h1>
+        <p>Discover top professionals in various fields</p>
       </header>
     <!-- Categories Section -->
     <section class="categories">
         <div class="category-list">
-            <a href="{% url 'category_detail' 'ui-ux-design' %}" class="category">UI/UX & Web Design</a>
-            <a href="{% url 'category_detail' 'graphic-design' %}" class="category">Graphic Design</a>
-            <a href="{% url 'category_detail' 'digital-marketing' %}" class="category">Digital Marketing</a>
-            <a href="{% url 'category_detail' 'multimedia' %}" class="category">Multimedia & Video Editing</a>
-            <a href="{% url 'category_detail' 'product-design' %}" class="category">Product & Interior Design</a>
+            {% for category in categories %}
+            <a href="{% url 'category_detail' category.id %}" class="category">
+                {{ category.name }}
+            </a>
+            {% empty %}
+            <p>No categories found.</p>
+            {% endfor %}
+
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 HireTalent. Connecting you with top professionals.</p>
     </footer>
 
 </body>
+
 </html>

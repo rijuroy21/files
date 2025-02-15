@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import *
 from django.http import HttpResponse
@@ -46,23 +46,24 @@ def logout_view(request):
 def home(request):
     return render(request,'home.html')
 
+def contact(request):
+    return render(request, 'contact.html')
+
+def how_it_works(request):
+    return render(request, 'how_it_works.html')
+
 def categories(request):
-    return render(request,'categories.html')
+    categories = Category.objects.all()
+    return render(request, 'categories.html', {'categories': categories})
 
+# Show subcategories for a specific category
+def category_detail(request, category_id):
+    category = get_object_or_404(Category, id=category_id)
+    subcategories = category.subcategories.all()
+    return render(request, 'category_detail.html', {'category': category, 'subcategories': subcategories})
 
-CATEGORIES = {
-    "ui-ux-design": ["UI/UX Designer", "Web Designer", "Mobile App Designer", "Wireframe & Prototype Designer"],
-    "graphic-design": ["Graphic Designer", "Illustrator", "Logo & Brand Identity Designer", "Packaging Designer"],
-    "digital-marketing": ["Social Media Designer", "Motion Graphics Designer", "Infographic Designer", "Advertising Designer"],
-    "multimedia": ["Video Editor", "3D Designer", "Game UI/UX Designer", "VR/AR Designer"],
-    "product-design": ["Product Designer", "Interior Designer", "Fashion Designer", "Jewelry Designer"],
-}
-
-# View for the main categories page
-def categories(request):
-    return render(request, 'categories.html', {"categories": CATEGORIES})
-
-# View for the category details page (subcategories)
-def category_detail(request, category_slug):
-    subcategories = CATEGORIES.get(category_slug, [])
-    return render(request, 'category_detail.html', {"category_slug": category_slug, "subcategories": subcategories})
+# Show freelancers in a specific subcategory
+def subcategory_detail(request, subcategory_id):
+    subcategory = get_object_or_404(SubCategory, id=subcategory_id)
+    freelancers = subcategory.freelancers.all()
+    return render(request, 'subcategory_detail.html', {'subcategory': subcategory, 'freelancers': freelancers})

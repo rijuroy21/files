@@ -3,8 +3,30 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #F4F4F4;
     color: #333;
+}
+
+h1 {
+    color: white;
+}
+
+h2, h3 {
+    color: #000000;
+}
+
+button {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #145c41;
 }
 
 /* Navigation Bar */
@@ -12,7 +34,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #343a40;
+    background-color: #333;
     padding: 15px 30px;
     color: white;
 }
@@ -26,7 +48,6 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding: 0;
 }
 
 .nav-links li {
@@ -41,11 +62,11 @@ body {
 }
 
 .nav-links a:hover {
-    color: #28a745;
+    color: #198754;
 }
 
 .join-btn {
-    background-color: #28a745;
+    background-color:#198754;
     color: white;
     padding: 8px 16px;
     border: none;
@@ -55,65 +76,72 @@ body {
 }
 
 .join-btn:hover {
-    background-color: #1e7e34;
+    background-color: #0c3f27;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #0c3f27;
+    text-align: center;
+    padding: 80px 20px;
+    color: #ffffff;
 }
 
 /* Category Detail Section */
 .category-detail {
     text-align: center;
-    padding: 60px 20px;
-    background: white;
+    padding: 50px 20px;
+    background: #ffffff;
     max-width: 800px;
-    margin: 50px auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
     border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.category-detail h1 {
-    color: #28a745;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.category-detail p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Subcategories */
-.subcategory-list {
+.category-detail ul {
     list-style: none;
     padding: 0;
 }
 
-.subcategory-list li {
-    background: #28a745;
+.category-detail li {
+    background: #198754;
     color: white;
+    margin: 10px 0;
     padding: 12px;
-    margin: 5px 0;
     border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.subcategory-list li:hover {
-    background: #1e7e34;
+.category-detail li:hover {
+    background: #145c41;
 }
 
-/* Back Button */
+.category-detail a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
 .back-button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: #343a40;
+    background: #333;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
+    transition: background 0.3s;
 }
 
 .back-button:hover {
-    background: #23272b;
+    background: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #0c3f27;
+    color: #ffffff;
+    font-size: 14px;
 }
