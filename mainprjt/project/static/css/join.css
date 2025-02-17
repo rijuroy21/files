@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
     color: #333;
 }
 
@@ -43,26 +43,12 @@ body {
     color: #198754;
 }
 
-.join-btn {
-    background-color:#198754;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.join-btn:hover {
-    background-color: #0c3f27;
-}
-
 /* Hero Section */
 .hero {
     background-color: #0c3f27;
     text-align: center;
     padding: 80px 20px;
-    color: white;
+    color: #ffffff;
 }
 
 .hero h1 {
@@ -72,45 +58,68 @@ body {
 
 .hero p {
     font-size: 18px;
-    max-width: 600px;
-    margin: auto;
 }
 
-/* Steps Section */
-.steps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px 20px;
+/* Freelancer Form Section */
+.freelancer-form {
+    width: 50%;
+    margin: 40px auto;
     background: white;
-}
-
-.step {
-    background: #198754;
-    color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.freelancer-form h2 {
     text-align: center;
-    width: 280px;
-    transition: transform 0.3s ease;
+    color: #0c3f27;
+    margin-bottom: 20px;
 }
 
-.step:hover {
-    transform: translateY(-5px);
+.freelancer-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
 }
 
-.step h2 {
-    margin-bottom: 10px;
-    font-size: 22px;
+.freelancer-form input, 
+.freelancer-form select, 
+.freelancer-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.freelancer-form textarea {
+    resize: none;
+}
+
+/* Submit Button */
+.freelancer-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #198754;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.freelancer-form button:hover {
+    background-color: #146c43;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background: #0c3f27;
-    color: white;
+    color: #ffffff;
     font-size: 14px;
 }

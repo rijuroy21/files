@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join as a Freelancer - HireTalent</title>
+    <link rel="stylesheet" href="{% static 'css/join.css' %}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">HireTalent</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'categories' %}">Categories</a></li>
+            <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Join as a Freelancer</h1>
+        <p>Showcase your skills and connect with clients worldwide.</p>
+    </header>
+
+    <section class="freelancer-form">
+        <h2>Register as a Freelancer</h2>
+        <form action="{% url 'join' %}" method="POST">
+            {% csrf_token %}
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="category">Select Category:</label>
+            <select id="category" name="category" required>
+                <option value="">-- Select a Category --</option>
+                <option value="UI/UX & Web Designers">UI/UX & Web Designers</option>
+                <option value="Graphic & Visual Designers">Graphic & Visual Designers</option>
+                <option value="Digital & Marketing Designers">Digital & Marketing Designers</option>
+                <option value="Multimedia & Video Designers">Multimedia & Video Designers</option>
+                <option value="Industrial & Product Designers">Industrial & Product Designers</option>
+            </select>
+
+            <label for="subcategory">Select Subcategory:</label>
+            <select id="subcategory" name="subcategory" required>
+                <option value="">-- Select a Subcategory --</option>
+                <!-- Subcategories will be populated dynamically -->
+            </select>
+
+            <label for="portfolio">Portfolio URL:</label>
+            <input type="url" id="portfolio" name="portfolio">
+
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" name="bio" rows="4" required></textarea>
+
+            <button type="submit">Join Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HireTalent. Connect with clients and grow your career.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle subcategory dropdown based on selected category
+        document.getElementById('category').addEventListener('change', function () {
+            const subcategoryDropdown = document.getElementById('subcategory');
+            subcategoryDropdown.innerHTML = '<option value="">-- Select a Subcategory --</option>'; // Reset dropdown
+
+            const subcategories = {
+                "UI/UX & Web Designers": ["UI/UX Designer", "Web Designer", "Mobile App Designer", "Wireframe & Prototype Designer"],
+                "Graphic & Visual Designers": ["Graphic Designer", "Illustrator", "Logo & Brand Identity Designer", "Print Designer", "Typography Designer", "Packaging Designer"],
+                "Digital & Marketing Designers": ["Social Media Designer", "Motion Graphics Designer", "Infographic Designer", "Email Template Designer", "Advertising Designer"],
+                "Multimedia & Video Designers": ["Video Editor", "3D Designer", "Game UI/UX Designer", "VR/AR Designer"],
+                "Industrial & Product Designers": ["Product Designer", "Interior Designer", "Fashion Designer", "Jewelry Designer"]
+            };
+
+            const selectedCategory = this.value;
+            if (selectedCategory && subcategories[selectedCategory]) {
+                subcategories[selectedCategory].forEach(sub => {
+                    let option = document.createElement('option');
+                    option.value = sub;
+                    option.textContent = sub;
+                    subcategoryDropdown.appendChild(option);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -45,6 +45,7 @@ class Freelancer(models.Model):
     email = models.EmailField(unique=True)
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES)
     subcategory = models.ForeignKey(SubCategory, on_delete=models.CASCADE, related_name='freelancers')
+
     portfolio_url = models.URLField(blank=True, null=True)
     bio = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -53,14 +54,12 @@ class Freelancer(models.Model):
         return f"{self.name} - {self.subcategory}"
 
 
-# Skill Model
 class Skill(models.Model):
     name = models.CharField(max_length=100, unique=True)
     
     def __str__(self):
         return self.name
 
-# Job Posting Model
 class Job(models.Model):
     client = models.ForeignKey(Profile, on_delete=models.CASCADE, limit_choices_to={'user_type': 'client'})
     title = models.CharField(max_length=200)
@@ -73,7 +72,6 @@ class Job(models.Model):
     def __str__(self):
         return self.title
 
-# Proposal Model
 class Proposal(models.Model):
     job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name='proposals')
     freelancer = models.ForeignKey(Freelancer, on_delete=models.CASCADE)
@@ -84,7 +82,6 @@ class Proposal(models.Model):
     def __str__(self):
         return f"{self.freelancer.profile.user.username} - {self.job.title}"
 
-# Review Model
 class Review(models.Model):
     freelancer = models.ForeignKey(Freelancer, on_delete=models.CASCADE, related_name='reviews')
     client = models.ForeignKey(Profile, on_delete=models.CASCADE, limit_choices_to={'user_type': 'client'})
@@ -94,8 +91,7 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.client.user.username} → {self.freelancer.profile.user.username} ({self.rating})"
-
-# Messages between Client and Freelancer
+ 
 class Message(models.Model):
     sender = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='sent_messages')
     receiver = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='received_messages')

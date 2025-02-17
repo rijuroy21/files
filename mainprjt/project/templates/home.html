@@ -11,7 +11,6 @@
 
 <body>
 
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo">HireTalent</div>
     <ul class="nav-links">
@@ -21,7 +20,7 @@
       <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
       <li><a href="{% url 'contact' %}">Contact</a></li>
     </ul>
-    <button class="join-btn">Join</button>
+    <a href="{% url 'join' %}"><button class="join-btn">Join</button></a>
   </nav>
 
   <header class="hero">
@@ -70,52 +69,21 @@
     });
   </script>
 
-  <!-- <section class="categories">
-    <h2>Explore Categories</h2>
-    <div class="category-list">
-      <div class="category">UI/UX Design</div>
-      <div class="category">Web Design</div>
-      <div class="category">Graphic Design</div>
-      <div class="category">Full Stack Development</div>
-      <div class="category">Mobile App Development</div>
-    </div>
-  </section> -->
-
-  <section class="featured">
-    <h2>Featured Professionals</h2>
-    <div class="profiles">
+<section class="featured">
+  <h2>Featured Professionals</h2>
+  <div class="profiles">
+      {% for freelancer in freelancers %}
       <div class="profile">
-        <img src="{% static 'images/designer.jpg' %}" alt="Designer">
-        <h3>Riju</h3>
-        <p>UI/UX Designer</p>
-        <button>View Profile</button>
+          <!-- <img src="{% static 'images/designer.jpg' %}" alt="{{ freelancer.name }}"> -->
+          <h3>{{ freelancer.name }}</h3>
+          <p>{{ freelancer.subcategory }}</p>
+          <a href="{% url 'profile' freelancer.id %}"><button>View Profile</button></a>
       </div>
-      <div class="profile">
-        <img src="{% static 'images/developer.jpg' %}" alt="Developer">
-        <h3>Shino</h3>
-        <p>Full Stack Developer</p>
-        <button>View Profile</button>
-      </div>
-      <div class="profile">
-        <img src="{% static 'images/developer.jpg' %}" alt="Developer">
-        <h3>Adith</h3>
-        <p>Web Designer</p>
-        <button>View Profile</button>
-      </div>
-      <div class="profile">
-        <img src="{% static 'images/developer.jpg' %}" alt="Developer">
-        <h3>Hari</h3>
-        <p>Graphic Designer</p>
-        <button>View Profile</button>
-      </div>
-      <div class="profile">
-        <img src="{% static 'images/developer.jpg' %}" alt="Developer">
-        <h3>Anit</h3>
-        <p>Graphic Designer</p>
-        <button>View Profile</button>
-      </div>
-    </div>
-  </section>
+      {% empty %}
+      <p>No freelancers found.</p>
+      {% endfor %}
+  </div>
+</section>
 
   <footer>
     <p>&copy; 2025 HireTalent. Find the best professionals today!</p>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ freelancer.name }} - Freelancer Profile</title>
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">HireTalent</div>
+    <ul class="nav-links">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'categories' %}">Categories</a></li>
+      <li><a href="#">Find Talent</a></li>
+      <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+    <a href="{% url 'join' %}"><button class="join-btn">Join</button></a>
+  </nav>
+
+  <section class="profile">
+    <h1>{{ freelancer.name }}</h1>
+    <div class="profile-details">
+      <div class="details">
+        <h2>{{ freelancer.category }}</h2>
+        <h3>{{ freelancer.subcategory }}</h3>
+        <p>{{ freelancer.email }}</p>
+        <p><strong>Portfolio URL:</strong> <a href="{{ freelancer.portfolio_url }}" target="_blank">{{ freelancer.portfolio_url }}</a></p>
+        <p><strong>Bio:</strong></p>
+        <p>{{ freelancer.bio }}</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HireTalent. Connect with clients and grow your career.</p>
+  </footer>
+
+</body>
+
+</html>
