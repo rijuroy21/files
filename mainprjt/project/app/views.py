@@ -7,6 +7,7 @@ from django.contrib.auth import login, authenticate,logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .forms import FreelancerEditForm
 
 # Create your views here.
 
@@ -30,11 +31,9 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home') 
+                return redirect('home')  # Redirect to account page after login
             else:
                 messages.error(request, 'Invalid username or password')
-        else:
-            messages.error(request, 'Invalid form submission')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
@@ -107,3 +106,25 @@ def join(request):
 def profile(request,freelancer_id):
     freelancer = get_object_or_404(Freelancer, id=freelancer_id)
     return render(request,'profile.html',{'freelancer': freelancer})
+
+
+@login_required
+def my_account(request):
+    freelancer = Freelancer.objects.filter(email__iexact=request.user.email).first()  # Case-insensitive lookup
+
+    if not freelancer:
+        messages.error(request, "No freelancer profile found for this account. Please create one.")
+        return redirect('join')  # Redirect to join page where they can create a profile
+
+    if request.method == 'POST':
+        form = FreelancerEditForm(request.POST, instance=freelancer)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your profile has been updated successfully.')
+            return redirect('my_account')
+        else:
+            messages.error(request, 'Please correct the errors below.')
+    else:
+        form = FreelancerEditForm(instance=freelancer)
+
+    return render(request, 'my_account.html', {'form': form, 'freelancer': freelancer})

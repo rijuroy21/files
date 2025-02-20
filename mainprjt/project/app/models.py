@@ -40,7 +40,7 @@ class Freelancer(models.Model):
         ("Multimedia & Video Designers", "Multimedia & Video Designers"),
         ("Industrial & Product Designers", "Industrial & Product Designers"),
     ]
-
+    
     name = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES)

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'home.html' %}
+
+    {% block content %}
+    <h2>My Account</h2>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color: green;">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    
+    {% if freelancer %}
+        <p><strong>Name:</strong> {{ freelancer.name }}</p>
+        <p><strong>Email:</strong> {{ freelancer.email }}</p>
+        <p><strong>Category:</strong> {{ freelancer.category }}</p>
+        <p><strong>Subcategory:</strong> {{ freelancer.subcategory }}</p>
+        <p><strong>Portfolio:</strong> <a href="{{ freelancer.portfolio_url }}" target="_blank">View Portfolio</a></p>
+        <p><strong>Bio:</strong> {{ freelancer.bio }}</p>
+    
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Changes</button>
+        </form>
+    {% else %}
+        <p>No freelancer profile found. <a href="{% url 'join' %}">Click here to create one.</a></p>
+    {% endif %}
+    
+    <a href="{% url 'logout' %}">Logout</a>
+    {% endblock %}
+    
+
+</body>
+</html>

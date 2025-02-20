@@ -13,4 +13,5 @@ urlpatterns=[
     path('subcategories/<int:subcategory_id>/', views.subcategory_detail, name='subcategory_detail'),
     path('join/',views.join,name='join'),
     path('profile/<int:freelancer_id>/',views.profile,name='profile'),
+    path('my-account/', views.my_account, name='my_account'),
 ]
