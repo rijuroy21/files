@@ -1,3 +1,5 @@
+//setters
+
 // class Button{
 //     constructor(){
 //         this.btn=document.createElement('button')
@@ -16,19 +18,23 @@
 // btn1.width=100
 // btn1.height=30
 
-class Button {
-    constructor() {
-        this.btn = document.createElement('button');
-        this.btn.textContent = "Click me"; 
-        document.body.appendChild(this.btn);
+//getters
+
+class Button{
+    constructor(){
+        this.btn=document.createElement('button')
+        this.btn.textContent='click me'
+        document.body.appendChild(this.btn)
+        this.btn.style.width=100+'px'
+        this.btn.style.height=50+'px'
+        this.btn.style.backgroundColor='green'
     }
-    set width(width) {
-        this.btn.style.width = width + 'px'; 
+    get width(){
+        return this.btn.style.width
     }
-    get width() {
-        return parseInt(this.btn.style.width);  
+    get height(){
+      return this.btn.style.height
     }
 }
-let btn1 = new Button();
-btn1.width = 200; 
-console.log(btn1.width); 
+let btn1=new Button()
+console.log(btn1.width,btn1.height)
