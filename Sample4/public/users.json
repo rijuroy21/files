@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "phone": 8803038830,
+      "email": "alice@example.com",
+      "age": 29,
+      "occupation": "Software Engineer",
+      "address": "123 Main St, New York, NY"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "phone": 880335330,
+      "email": "bob@example.com",
+      "age": 35,
+      "occupation": "Graphic Designer",
+      "address": "456 Elm St, Los Angeles, CA"
+    },
+    {
+      "id": 3,
+      "name": "Charlie Brown",
+      "phone": 8809876543,
+      "email": "charlie@example.com",
+      "age": 41,
+      "occupation": "Marketing Manager",
+      "address": "789 Oak St, Chicago, IL"
+    },
+    {
+      "id": 4,
+      "name": "David Miller",
+      "phone": 8801234567,
+      "email": "david@example.com",
+      "age": 26,
+      "occupation": "Data Analyst",
+      "address": "159 Pine St, Houston, TX"
+    },
+    {
+      "id": 5,
+      "name": "Eve Thompson",
+      "phone": 8807654321,
+      "email": "eve@example.com",
+      "age": 32,
+      "occupation": "HR Specialist",
+      "address": "753 Cedar St, Miami, FL"
+    },
+    {
+      "id": 6,
+      "name": "Frank White",
+      "phone": 8801122334,
+      "email": "frank@example.com",
+      "age": 28,
+      "occupation": "Project Manager",
+      "address": "951 Maple St, Seattle, WA"
+    },
+    {
+      "id": 7,
+      "name": "Grace Lee",
+      "phone": 8806677889,
+      "email": "grace@example.com",
+      "age": 30,
+      "occupation": "UX Designer",
+      "address": "852 Birch St, Austin, TX"
+    },
+    {
+      "id": 8,
+      "name": "Henry Adams",
+      "phone": 8805566778,
+      "email": "henry@example.com",
+      "age": 45,
+      "occupation": "Financial Analyst",
+      "address": "357 Redwood St, Denver, CO"
+    },
+    {
+      "id": 9,
+      "name": "Isabella Clark",
+      "phone": 8803344556,
+      "email": "isabella@example.com",
+      "age": 27,
+      "occupation": "Content Writer",
+      "address": "268 Walnut St, San Diego, CA"
+    },
+    {
+      "id": 10,
+      "name": "Jack Wilson",
+      "phone": 8807788990,
+      "email": "jack@example.com",
+      "age": 38,
+      "occupation": "Software Developer",
+      "address": "639 Spruce St, Boston, MA"
+    }
+]
