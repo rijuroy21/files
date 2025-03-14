@@ -6,7 +6,7 @@
 //   )
 // }
 // export default App
-  
+
 
 
 // const App=()=>(
@@ -257,42 +257,112 @@
 
 
 
-import React, { useMemo, useState } from 'react';
+// import React, { useMemo, useState } from 'react';
 
-function ExpensiveComponent({ items, filter }) {
-    
-    const filteredItems = useMemo(() => {
-        console.log('Filtering items...'); 
-        return items.filter(item => item.includes(filter));
-    }, [items, filter]);
+// function ExpensiveComponent({ items, filter }) {
 
+//     const filteredItems = useMemo(() => {
+//         console.log('Filtering items...'); 
+//         return items.filter(item => item.includes(filter));
+//     }, [items, filter]);
+
+//     return (
+//         <div>
+//             <h3>Filtered Items:</h3>
+//             <ul>
+//                 {filteredItems.map((item, index) => (
+//                     <li key={index}>{item}</li>
+//                 ))}
+//             </ul>
+//         </div>
+//     );
+// }
+
+// function App() {
+//     const [filter, setFilter] = useState('');
+//     const items = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+
+//     return (
+//         <div>
+//             <input 
+//                 type="text"
+//                 value={filter}
+//                 onChange={(e) => setFilter(e.target.value)}
+//                 placeholder="Filter items"
+//             />
+//             <ExpensiveComponent items={items} filter={filter} />
+//         </div>
+//     );
+// }
+
+// export default App;
+
+
+
+// import { useState, useCallback } from "react";
+
+// const App = () => {
+//     const [Count, setCount] = useState(0);
+
+//     const increment = () => {
+//         setCount((count) => count + 1);
+//         console.log("increment")
+//     };
+// }
+// return (
+//     <>
+//         <p>count:</p>
+//         <button onClick={increment}>+</button>
+//     </>
+// )
+// export default App
+
+
+
+// import { useCallback, useState } from "react";
+// import Child from "./Child";
+// import {BrowserRouter} from 'react-router-dom'
+
+// const App = () => {
+//     const [count, setCount] = useState(0);
+
+//     const increment = useCallback(() => {
+//         setCount((count) => count + 1);
+//         console.log("increment")
+//     });
+
+//     return (
+
+//         <>
+//             <Child increment={increment} />
+//             <p>Count: {count}</p>
+//             <button onClick={increment}>+</button>
+//         </>
+//     )
+// }
+
+// export default App
+
+
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
+import Nav from './component/Nav'
+import Products from './Pages/Products'
+
+const App = () => {
     return (
         <div>
-            <h3>Filtered Items:</h3>
-            <ul>
-                {filteredItems.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
-            </ul>
+            <Nav/>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='' element={<Home />} />
+                    <Route path='Products' element={<Products />} />
+                </Routes>
+            </BrowserRouter>
+
         </div>
-    );
+    )
 }
 
-function App() {
-    const [filter, setFilter] = useState('');
-    const items = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
-
-    return (
-        <div>
-            <input 
-                type="text"
-                value={filter}
-                onChange={(e) => setFilter(e.target.value)}
-                placeholder="Filter items"
-            />
-            <ExpensiveComponent items={items} filter={filter} />
-        </div>
-    );
-}
-
-export default App;
+export default App
