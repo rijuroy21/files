@@ -344,25 +344,45 @@
 // export default App
 
 
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './Pages/Home'
-import Nav from './component/Nav'
-import Products from './Pages/Products'
+// import React from 'react'
+// import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// import Home from './Pages/Home'
+// import Nav from './component/Nav'
+// import Products from './Pages/Products'
 
-const App = () => {
+// const App = () => {
+//     return (
+//         <div>
+//             <Nav/>
+//             <BrowserRouter>
+//                 <Routes>
+//                     <Route path='' element={<Home />} />
+//                     <Route path='Products' element={<Products />} />
+//                 </Routes>
+//             </BrowserRouter>
+
+//         </div>
+//     )
+// }
+
+// export default App
+
+
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './component/Home';
+import Product from './component/product';
+
+function App() {
     return (
-        <div>
-            <Nav/>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='' element={<Home />} />
-                    <Route path='Products' element={<Products />} />
-                </Routes>
-            </BrowserRouter>
-
-        </div>
-    )
+        <Router>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/product/:id' element={<Product />} />
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
+export default App;
