@@ -1,36 +1,33 @@
-import { useNavigate } from "react-router-dom"
-import { useEffect, useState } from "react"
 
-function Home() {
-    const prodnavigate = useNavigate()
-    const getproduct = (id) => {
-        prodNavigate(`/product/${id}`)
-    }
+import { useNavigate } from "react-router-dom";
+import { useEffect,useState } from "react";
 
-    const [products, setProducts] = useState([])
+function Home(){
+  const prodNavigate=useNavigate()
+  const getProduct=(id)=>{
+    prodNavigate(`/products/${id}`)
+  }
+  const [Products,setProducts]=useState([])
+  useEffect(()=>{
+    fetch('https://dummyjson.com/products')
+    .then(res=>res.json())
+    .then(json=>{
+      console.log(json)
+      setProducts(json.products)
 
-    useEffect(() => {
-        fetch('https://dummyjson.com/products')
-            .then(response => response.json())
-            .then(json => {
-                console.log(json);
-                setProducts(json);
-            })
-    }, [])
-
-    return (
-        <>
-            <h1>Home page</h1>
-            <ul>
-                {posts.map((product, index) => (
-                    <ul key={product.id}>
-                        <li>{index + 1}. {product.title}
-                            <button onClick={() => getproduct(product.id)}>Get id</button></li>
-                    </ul>
-                ))}
-            </ul>
-        </>
-    );
+      })
+  },[])
+  return (
+    <>
+     
+      <h1>Home</h1>
+      {Products.map((product,index)=>(
+        <ul key={product.id}>
+          <li>{index+1}.{product.name}{product.images.thumbnail}<button onClick={()=>getProduct(product.id)}>View Product</button></li>
+        </ul>
+      ))}
+    </>
+  )
 }
 
 export default Home;
