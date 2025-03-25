@@ -16,12 +16,13 @@
     <ul class="nav-links">
       <li><a href="{% url 'home' %}">Home</a></li>
       <li><a href="{% url 'categories' %}">Categories</a></li>
-      <li><a href="#">Find Talent</a></li>
+      {% comment %} <li><a href="#">Find Talent</a></li> {% endcomment %}
       <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
       <li><a href="{% url 'contact' %}">Contact</a></li>
       <li><a href="{% url 'logout' %}">Logout</a></li>
+      <li><a href="{% url 'my_account' %}">My Account</a></li>
     </ul>
-    <a href="{% url 'join' %}"><button class="join-btn">Join</button></a>
+    {% comment %} <a href="{% url 'join' %}"><button class="join-btn">Join</button></a> {% endcomment %}
   </nav>
 
   <section class="profile">

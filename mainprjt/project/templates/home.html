@@ -5,7 +5,7 @@
   {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hire Designers & Developers</title>
+  <title>Hire Designers</title>
   <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 
@@ -16,60 +16,53 @@
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="{% url 'categories' %}">Categories</a></li>
-      <li><a href="#">Find Talent</a></li>
       <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
       <li><a href="{% url 'contact' %}">Contact</a></li>
-      <li><a href="{% url 'logout' %}">Logout</a></li>
-      <li><a href="{% url 'my_account' %}">My Account</a></li>
-    </ul>
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'my_account' %}">My Account</a></li>
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+{% else %}
     <a href="{% url 'join' %}"><button class="join-btn">Join</button></a>
+{% endif %}
+    </ul>
   </nav>
 
   <header class="hero">
-    <h1>Find the Best Designers & Developers</h1>
+    <h1>Find the Best Designers</h1>
     <p>Connect with top talent to bring your ideas to life.</p>
     <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search for skills, designers, developers...">
+      <input type="text" id="searchInput" placeholder="Search for for any service....">
       <button id="searchButton">Search</button>
     </div>
   </header>
-
   <script>
-    document.getElementById("searchButton").addEventListener("click", function() {
+    document.getElementById("searchButton").addEventListener("click", function () {
         let query = document.getElementById("searchInput").value.toLowerCase();
         let profiles = document.querySelectorAll(".profile");
         let found = false;
 
         profiles.forEach(profile => {
-            let name = profile.querySelector("h3").textContent.toLowerCase();
-            let role = profile.querySelector("p").textContent.toLowerCase();
-
-            if (name.includes(query) || role.includes(query)) {
-                profile.style.display = "block"; // Show matching profiles
-                found = true;
-            } else {
-                profile.style.display = "none"; // Hide non-matching profiles
-            }
+            let text = profile.innerText.toLowerCase();
+            profile.style.display = text.includes(query) ? "block" : "none";
+            if (text.includes(query)) found = true;
         });
 
-        let noResultsMessage = document.getElementById("noResultsMessage");
+        let noResults = document.getElementById("noResultsMessage");
 
         if (!found) {
-            if (!noResultsMessage) {
-                noResultsMessage = document.createElement("p");
-                noResultsMessage.id = "noResultsMessage";
-                noResultsMessage.textContent = "No results found.";
-                noResultsMessage.style.color = "red";
-                noResultsMessage.style.textAlign = "center";
-                document.querySelector(".profiles").appendChild(noResultsMessage);
+            if (!noResults) {
+                noResults = document.createElement("p");
+                noResults.id = "noResultsMessage";
+                noResults.textContent = "No results found.";
+                noResults.style.color = "red";
+                document.querySelector(".profiles").appendChild(noResults);
             }
-        } else {
-            if (noResultsMessage) {
-                noResultsMessage.remove();
-            }
+        } else if (noResults) {
+            noResults.remove();
         }
     });
-  </script>
+</script>
+
 
 <section class="featured">
   <h2>Featured Professionals</h2>

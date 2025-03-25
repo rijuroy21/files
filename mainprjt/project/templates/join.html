@@ -18,6 +18,7 @@
             <li><a href="{% url 'how_it_works' %}">How It Works</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'my_account' %}">My Account</a></li>
         </ul>
     </nav>
 
@@ -28,7 +29,7 @@
 
     <section class="freelancer-form">
         <h2>Register as a Freelancer</h2>
-        <form action="{% url 'join' %}" method="POST">
+        <form action="{% url 'join' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -49,7 +50,6 @@
             <label for="subcategory">Select Subcategory:</label>
             <select id="subcategory" name="subcategory" required>
                 <option value="">-- Select a Subcategory --</option>
-                <!-- Subcategories will be populated dynamically -->
             </select>
 
             <label for="portfolio">Portfolio URL:</label>
@@ -58,6 +58,10 @@
             <label for="bio">Short Bio:</label>
             <textarea id="bio" name="bio" rows="4" required></textarea>
 
+            <!-- Work Images Section -->
+            <label for="work_images">Upload Work Images:</label>
+            <input type="file" id="work_images" name="work_images" accept="image/*" multiple>
+            
             <button type="submit">Join Now</button>
         </form>
     </section>
@@ -67,10 +71,9 @@
     </footer>
 
     <script>
-        // JavaScript to handle subcategory dropdown based on selected category
         document.getElementById('category').addEventListener('change', function () {
             const subcategoryDropdown = document.getElementById('subcategory');
-            subcategoryDropdown.innerHTML = '<option value="">-- Select a Subcategory --</option>'; // Reset dropdown
+            subcategoryDropdown.innerHTML = '<option value="">-- Select a Subcategory --</option>';
 
             const subcategories = {
                 "UI/UX & Web Designers": ["UI/UX Designer", "Web Designer", "Mobile App Designer", "Wireframe & Prototype Designer"],
